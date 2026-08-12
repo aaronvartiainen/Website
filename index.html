@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron Reinhold Hannunpoika Vartiainen</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: Calibri, "Segoe UI", Roboto, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        /* 1.5 asteen kallistus koko sisällölle ja riveille */
+        .wrapper {
+            transform: rotate(1.5deg);
+            transform-origin: center center;
+            max-width: 650px;
+            width: 100%;
+        }
+
+        /* Ensimmäiset lauseet kursiivilla */
+        .bio {
+            font-size: 16px;
+            line-height: 1.0;
+            font-weight: 400;
+            font-style: italic;
+            color: #000000;
+        }
+
+        /* Lisätty yksi rivi enemmän marginaalia ylös ja alas */
+        .photo-container {
+            margin-top: 48px;
+            margin-bottom: 48px;
+        }
+        
+        .photo-container img {
+            max-width: 250px;
+            height: auto;
+            display: block;
+        }
+
+        /* Kohdistettu taulukkorakenne */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            row-gap: 0px;
+            font-size: 16px;
+            line-height: 1.0;
+        }
+
+        .label {
+            font-weight: 400;
+            color: #000000;
+        }
+
+        .value {
+            font-weight: 400;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="bio">
+            Exploring the roots of existence. Currently navigating connections between aesthetics, game theory, semantics and evolution.
+        </div>
+
+        <div class="photo-container">
+            <img src="photo.gif" alt="Aaron Vartiainen">
+        </div>
+
+        <div class="info-grid">
+            <div class="label">Name:</div>
+            <div class="value">Aaron Reinhold Hannunpoika Vartiainen</div>
+
+            <div class="label">Species:</div>
+            <div class="value">Human</div>
+
+            <div class="label">Planet:</div>
+            <div class="value">Earth</div>
+
+            <div class="label">Consciousness:</div>
+            <div class="value">Yes</div>
+
+            <div class="label">Nationality:</div>
+            <div class="value">Finnish</div>
+
+            <div class="label">Education:</div>
+            <div class="value">Architect (M.Arch)</div>
+
+            <div class="label">Belief system:</div>
+            <div class="value">Religion (custom)</div>
+
+            <div class="label">Contact:</div>
+            <div class="value">Via Instagram direct messages</div>
+        </div>
+    </div>
+</body>
+</html>
