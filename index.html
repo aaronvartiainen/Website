@@ -154,5 +154,22 @@
             <div class="value"><a href="https://ig.me/m/aaronvartiainen0" target="_blank" rel="noopener noreferrer">Instagram DM</a></div>
         </div>
     </div>
+    <!-- Huomaamaton kävijälaskuri alalaidassa (CountAPI) -->
+<div style="position: fixed; bottom: 8px; right: 12px; font-size: 9px; opacity: 0.3; color: #000000; font-family: sans-serif;">
+  <span id="visits">0</span>
+</div>
+
+<script>
+  // Vaihda 'OMAN_SIVUSI_DOMAIN.com' tilalle oma verkkosivusi osoite tai uniikki tunniste
+  fetch('https://api.countapi.xyz/hit/aaronvartiainen.github.io/visits')
+    .then(res => res.json())
+    .then(res => {
+      document.getElementById('visits').innerText = res.value;
+    })
+    .catch(() => {
+      // Jos palveluun ei saada yhteyttä, piilotetaan numero kokonaan
+      document.getElementById('visits').style.display = 'none';
+    });
+</script>
 </body>
 </html>
