@@ -154,20 +154,23 @@
             <div class="value"><a href="https://ig.me/m/aaronvartiainen0" target="_blank" rel="noopener noreferrer">Instagram DM</a></div>
         </div>
     </div>
-<!-- Huomaamaton kävijälaskuri alalaidassa (CounterAPI) -->
-<div style="position: fixed; bottom: 8px; right: 12px; font-size: 10px; opacity: 0.3; color: #000000; font-family: sans-serif;">
-  <span id="visits">0</span>
+<!-- Kävijälaskuri -->
+<div style="position: fixed; bottom: 8px; right: 12px; font-size: 12px; opacity: 0.3; color: #000000;">
+  <span id="visits"></span>
 </div>
 
 <script>
-  fetch('https://api.counterapi.dev/v1/aaronvartiainen_github_io/visits/up')
-    .then(res => res.json())
+  // Hakee kävijämäärän turvallisesti (vain tekstiä)
+  fetch('https://api.counterapi.dev/v1/aaronvartiainen/sivu/up')
+    .then(response => response.json())
     .then(data => {
+      // Varmistetaan, että saatiin oikea numero
       if (data && data.count) {
         document.getElementById('visits').innerText = data.count;
       }
     })
     .catch(() => {
+      // Jos palvelu ei toimi, piilotetaan elementti
       document.getElementById('visits').style.display = 'none';
     });
 </script>
