@@ -154,25 +154,9 @@
             <div class="value"><a href="https://ig.me/m/aaronvartiainen0" target="_blank" rel="noopener noreferrer">Instagram DM</a></div>
         </div>
     </div>
-<!-- Kävijälaskuri -->
-<div style="position: fixed; bottom: 8px; right: 12px; font-size: 12px; opacity: 0.3; color: #000000;">
-  <span id="visits"></span>
+<!--  laskuri (Ei JavaScriptiä) -->
+<div style="position: fixed; bottom: 8px; right: 12px; opacity: 0.3; filter: grayscale(100%); pointer-events: none;">
+  <img src="https://komarev.com/ghpvc/?username=aaronvartiainen-site&label=VISITS&style=flat-square&color=lightgrey" alt="Visits" style="height: 14px;">
 </div>
-
-<script>
-  // Hakee kävijämäärän turvallisesti (vain tekstiä)
-  fetch('https://api.counterapi.dev/v1/aaronvartiainen/sivu/up')
-    .then(response => response.json())
-    .then(data => {
-      // Varmistetaan, että saatiin oikea numero
-      if (data && data.count) {
-        document.getElementById('visits').innerText = data.count;
-      }
-    })
-    .catch(() => {
-      // Jos palvelu ei toimi, piilotetaan elementti
-      document.getElementById('visits').style.display = 'none';
-    });
-</script>
 </body>
 </html>
